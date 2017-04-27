@@ -28,7 +28,7 @@ Parsear o arquivo e no final mostrar as seguintes informações na saída:
 
 * Spring Boot 1.5.3.RELEASE
 * AngularJS 1.4.9
-* Distribuição: .jar
+* Distribuição: .jar (compilado em Java 8)
 
 ## Estrutura
 ![Alt text](https://raw.githubusercontent.com/leticiaalves/WebhookManager/master/docs/FolderStructure.png)
