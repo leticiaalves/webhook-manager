@@ -1,5 +1,6 @@
 package br.com.moip.webhook.manager.component;
 
+import java.io.File;
 import java.net.URI;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -13,7 +14,6 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import br.com.moip.webhook.manager.to.Dashboard;
@@ -23,11 +23,12 @@ import br.com.moip.webhook.manager.to.Log;
 public class DashboardComponent {
 
 	public Dashboard readLogFile() throws Exception {
-
+		
+		File file = new File("./log.txt");
 		List<Log> logsList = new ArrayList<Log>();
 		Map<String, Integer> sumStatus = new TreeMap<String, Integer>();
 
-		URI uri = new ClassPathResource("log.txt").getURI();
+		URI uri = file.toURI();
 
 		String urlRegex = "(request_to=\")(.*?)(\")";
 		String codeRegex = "(response_status=\")(.*?)(\")";
