@@ -77,25 +77,25 @@ public class WebhookManagerApplicationTests {
 		
 	}	
 	
-	public void addToLogsList(List<Log> listaLogs, String url) {
+	public void addToLogsList(List<Log> logsList, String url) {
 		Log log = new Log(url);
 		
-		if (listaLogs.contains(log)) {
-			int totalAtual = listaLogs.get(listaLogs.indexOf(log)).getSum();
-			listaLogs.get(listaLogs.indexOf(log)).setSum(++totalAtual);
+		if (logsList.contains(log)) {
+			int currentSum = logsList.get(logsList.indexOf(log)).getSum();
+			logsList.get(logsList.indexOf(log)).setSum(++currentSum);
 			
 		} else {
 			log.setSum(1);
-			listaLogs.add(log);
+			logsList.add(log);
 		}
 	}
 	
-	public void addToSumStatus(Map<String, Integer> quantidadePorStatus, String status) {
-		if (quantidadePorStatus.containsKey(status)) {
-			int totalAtual = quantidadePorStatus.get(status);
-			quantidadePorStatus.put(status, ++totalAtual);
+	public void addToSumStatus(Map<String, Integer> sumStatus, String status) {
+		if (sumStatus.containsKey(status)) {
+			int currentSum = sumStatus.get(status);
+			sumStatus.put(status, ++currentSum);
 		} else {
-			quantidadePorStatus.put(status, 1);
+			sumStatus.put(status, 1);
 		}
 	}
 }
