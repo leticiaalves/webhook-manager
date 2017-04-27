@@ -38,4 +38,4 @@ Parsear o arquivo e no final mostrar as seguintes informações na saída:
 2. Abrir o prompt de comando (deve estar no diretório do item anterior)
 3. Digitar a seguinte linha:
 `java -jar WebhookManager-1.0-SNAPSHOT.jar`
-
+4. Acesse a URL http://localhost:8099/index.html#/home no seu navegador (a tela proposta pela task fica em http://localhost:8099/index.html#/dashboard).
