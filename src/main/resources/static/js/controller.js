@@ -1,9 +1,14 @@
-app.controller('dashboardController', function($scope) {
+app.controller("dashboardController", ['$scope', '$http', 'config', 
+                               function($scope,   $http,   config) {
 	
-	$scope.title = "Dashboard - Webhooks";
 	$scope.threeMostCalledLabel = "3 urls mais chamadas";
 	$scope.sumStatusLabel = "Quantidade de webhooks por status";
-});
+	
+	$http.get(config.baseUrl + "/dashboard").success(function (data) {
+		$scope.threeMostCalled = data.threeMostCalled;
+		$scope.sumStatus = data.sumStatus;
+	});
+}]);
 
 app.controller('aboutController', function($scope) {
 	$scope.title = "Sobre";
