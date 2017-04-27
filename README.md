@@ -39,4 +39,4 @@ Parsear o arquivo e no final mostrar as seguintes informações na saída:
 3. Digitar a seguinte linha:
 `java -jar WebhookManager-1.0-SNAPSHOT.jar`
 4. Acessar a URL http://localhost:8099/index.html#/home no navegador (a tela proposta pela task fica em http://localhost:8099/index.html#/dashboard).
-Obs.: Atenção ao encerrar o spring-boot, ele é um processo, aperte ctrl+c ou execute o comando kill.
+* Obs.: Atenção ao encerrar o spring-boot, ele é um processo, aperte ctrl+c ou execute o comando kill.
