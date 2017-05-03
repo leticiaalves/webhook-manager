@@ -6,7 +6,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -51,6 +50,7 @@ public class DashboardComponent {
 	}
 	
 	private List<Log> sortAndSelect(List<Log> logsList, int portion) {	
+		logsList.sort( (o1, o2) -> o2.getSum().compareTo(o1.getSum()) );		
 		return logsList.subList(0, portion);
 	}
 	
