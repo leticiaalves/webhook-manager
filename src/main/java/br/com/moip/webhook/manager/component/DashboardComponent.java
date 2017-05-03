@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -51,14 +50,7 @@ public class DashboardComponent {
 		return new Dashboard(sortAndSelect(logsList, 3), sumStatus);
 	}
 	
-	private List<Log> sortAndSelect(List<Log> logsList, int portion) {
-		Collections.sort(logsList, new Comparator<Log>() {
-			@Override
-			public int compare(Log o1, Log o2) {
-				return o2.getSum().compareTo(o1.getSum());
-			}
-		});
-		
+	private List<Log> sortAndSelect(List<Log> logsList, int portion) {	
 		return logsList.subList(0, portion);
 	}
 	
